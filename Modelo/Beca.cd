@@ -1,30 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Modelo.Entidades.Beca" Collapsed="true">
-    <Position X="1.5" Y="1.75" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAgAAA=</HashCode>
       <FileName>Entidades\Beca.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.DatosAcademicos" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.CreditoBeca" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAEAAACAAACAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entidades\DatosAcademicos.cs</FileName>
+      <HashCode>AAAAAAAEAAAAAAAAQAAAAAAAAAAAAAAAATIABQAAAAg=</HashCode>
+      <FileName>Entidades\CreditoBeca.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Estudiante" Collapsed="true">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Institucion" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAIEAGAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
-      <FileName>Entidades\Estudiante.cs</FileName>
+      <HashCode>AAAAAAAAACQAAAAAAIAAwAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Entidades\Institucion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelo.Entidades.OfertaBecas" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgIQAAACAAAIAAAAAAAgABAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Entidades\OfertaBecas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelo.Entidades.Persona" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAQAAAAIEAEgggAgAAAAAAAAAAQIAAiAAAAA=</HashCode>
+      <FileName>Entidades\Persona.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelo.Entidades.Reporte" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAo=</HashCode>
+      <FileName>Entidades\Reporte.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Modelo.Entidades.Solicitud" Collapsed="true">
-    <Position X="4" Y="1.75" Width="1.5" />
+    <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAgAAIAAAACAAAAIAAAAAAAA=</HashCode>
+      <HashCode>CACAAAAABAAAAAAAAAECAAAAAAAQQAAAAAAEBCAAAAA=</HashCode>
       <FileName>Entidades\Solicitud.cs</FileName>
     </TypeIdentifier>
   </Class>

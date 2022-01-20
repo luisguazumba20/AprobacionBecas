@@ -8,9 +8,8 @@ namespace Modelo.Entidades
 {
     public class Beca
     {
-        public string codBeca { get; set; }
-        public string Expediente { get; set; }
-        public DateTime FechaIngreso { get; set; }
-        public string Detalles { get; set; }
+        public int BecaID { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
     }
 }

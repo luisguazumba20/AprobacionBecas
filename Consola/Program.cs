@@ -10,10 +10,10 @@ namespace Consola
         {
             Solicitud NuevaSolicitud = new Solicitud()
             {
-                Admitidos = "Juanito Maldonado",
-                Becados = "Antonela Caicedo",
-                Espera = "Gustavo Loor",
-                Lista = new List<Estudiante>() { new Estudiante() { } }
+                //Admitidos = "Juanito Maldonado",
+                //Becados = "Antonela Caicedo",
+                //Espera = "Gustavo Loor",
+                //Lista = new List<Estudiante>() { new Estudiante() { } }
             };
         }
     }
