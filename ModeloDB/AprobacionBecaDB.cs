@@ -14,6 +14,7 @@ namespace ModeloDB
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Reporte> Reportes { get; set; }
         public DbSet<Solicitud> Solicitudes { get; set; }
+        public DbSet<OfertaInstitucion> OfInst { get; set; }
 
         //Configuración de la Conexión.
         override protected void OnConfiguring(DbContextOptionsBuilder options)
