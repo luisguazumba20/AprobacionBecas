@@ -25,6 +25,7 @@ namespace Modelo.Entidades
         public string Profesion { get; set; }
 
         // Relación Uno a Uno
+        public int SolicitudId { get; set; }
         public Solicitud Solicitud { get; set; }
     }
 }

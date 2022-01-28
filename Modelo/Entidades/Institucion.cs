@@ -16,5 +16,8 @@ namespace Modelo.Entidades
         //Relación con Ofertas
         public List<OfertaBecas> Ofertas { get; set; }
 
+        // Relación con los prerequisitos de la materia
+        public List<OfertaInstitucion> OfertasInst { get; set; }
+
     }
 }

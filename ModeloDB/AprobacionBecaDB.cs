@@ -8,8 +8,9 @@ namespace ModeloDB
     {
         //Declaración de las entididades de Modelo
         public DbSet<Beca> Becas { get; set; }
+        public DbSet<Configuracion> Configuraciones { get; set; }
         public DbSet<CreditoBeca> Creditos { get; set; }
-        public DbSet<Institucion> Institutuciones { get; set; }
+        public DbSet<Institucion> Instituciones { get; set; }
         public DbSet<OfertaBecas> Ofertas { get; set; }
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Reporte> Reportes { get; set; }
@@ -27,17 +28,40 @@ namespace ModeloDB
         //Configurar el modelo de objetos
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Configuracion No tiene clave primaria
+            modelBuilder.Entity<Configuracion>()
+                .HasNoKey();
+
+            modelBuilder.Entity<Beca>()
+                .HasNoKey();
+
+            //OfertasInstituciones
+
+            //OfertasBecas
+            modelBuilder.Entity<OfertaInstitucion>()
+                .HasOne(oinstituciones => oinstituciones.Ofertas)
+                .WithMany(ofertasbecas => ofertasbecas.OfertaInst)
+                .OnDelete(DeleteBehavior.NoAction)
+                .HasForeignKey(oinstituciones => oinstituciones.OfertaId);
+
+            //Instituciones
+            modelBuilder.Entity<OfertaInstitucion>()
+                .HasOne(inst => inst.Ofertas)
+                .WithMany(ofertasbecas => ofertasbecas.OfertaInst)
+                .OnDelete(DeleteBehavior.NoAction)
+                .HasForeignKey(inst => inst.OfertaId);
+
             // Relación uno a muchos; a un crédito pueden acceder varias Personas 
             modelBuilder.Entity<Persona>()
                 .HasOne(persona => persona.CreditoBeca)
-                .WithMany(creditoBeca => creditoBeca.Personas)
+                .WithMany(credito => credito.Personas)
                 .HasForeignKey(persona => persona.CreditoId);
- 
-            // Relación uno a muchos; en una institución se pueden ofertar varias Becas
-            modelBuilder.Entity<OfertaBecas>()
-                .HasOne(ofertaBecas => ofertaBecas.Institucion)
-                .WithMany(institucion => institucion.Ofertas)
-                .HasForeignKey(ofertaBecas => ofertaBecas.InstitucionId);
+
+            // Clave Primaria formada por dos claves foraneas.
+            modelBuilder.Entity<OfertaInstitucion>()
+                .HasKey(ofertaIns => new {
+                    ofertaIns.InstitucionId,
+                    ofertaIns.OfertaId});
 
             // Relación uno a muchos; a una Oferta de Becas pueden acceder varias Personas
             modelBuilder.Entity<Persona>()
@@ -55,14 +79,13 @@ namespace ModeloDB
             modelBuilder.Entity<Persona>()
                 .HasOne(persona => persona.Solicitud)
                 .WithOne(solicitud => solicitud.Persona)
-                .HasForeignKey<Solicitud>(solicitud => solicitud.PersonaId);
+                .HasForeignKey<Persona>(persona => persona.SolicitudId);
 
             // Relación uno a uno; una solicitud consta de un solo crédito
             modelBuilder.Entity<Solicitud>()
                 .HasOne(solicitud => solicitud.Credito)
                 .WithOne(credito => credito.Solicitud)
-                .HasForeignKey<CreditoBeca>(credito => credito.SolicitudId);
-
+                .HasForeignKey<Solicitud>(solicitud => solicitud.CreditoId);
         }
     }
 }

@@ -14,11 +14,14 @@ namespace Modelo.Entidades
 
         public string Duracion { get; set; }
         public string Modalidad { get; set; }
-        public string FechaInicio { get; set; }
+        public DateTime FechaInicio { get; set; }
         public string TipoFinanciamiento { get; set; }
         public double Costo { get; set; }
 
         //Relación con Personas
         public List<Persona> Personas { get; set; }
+
+        // Grafo: Instituciones _ ofertas de becas
+        public List<OfertaInstitucion> OfertaInst { get; set; }
     }
 }

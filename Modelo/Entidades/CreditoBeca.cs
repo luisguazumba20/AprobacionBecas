@@ -16,6 +16,7 @@ namespace Modelo.Entidades
         public double CuotasMensuales { get; set; }
         public string Tiempo { get; set; }
         public string Estado { get; set; }
+
         // Relación con Personas
         public List<Persona> Personas { get; set; }
     }

@@ -22,6 +22,7 @@ namespace Modelo.Entidades
         public string TipoBeca { get; set; }
 
         // Relación Uno a Uno
+        public int CreditoId { get; set; }
         public CreditoBeca Credito { get; set; }
 
     }
